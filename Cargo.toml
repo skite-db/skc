@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = ["libs/*", "cmd/*", "skc"]
+
+[workspace.package]
+authors = ["SkiteDB Team's"]
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+edition = "2024"
+repository = ""
+
+[workspace.dependencies]
+skc_core = { path = "./libs/skc_core" }
+skc_init = { path = "./cmd/skc_init" }
