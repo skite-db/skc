@@ -7,7 +7,7 @@ authors = ["SkiteDB Team's"]
 license = "MIT OR Apache-2.0"
 version = "0.1.0"
 edition = "2024"
-repository = ""
+repository = "git@github.com:skite-db/skc.git"
 
 [workspace.dependencies]
 skc_core = { path = "./libs/skc_core" }
