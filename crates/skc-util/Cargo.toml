@@ -1,5 +1,5 @@
 [package]
-name = "skc-utils"
+name = "skc-util"
 authors.workspace = true
 license.workspace = true
 version.workspace = true

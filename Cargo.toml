@@ -11,10 +11,12 @@ edition = "2024"
 repository = "git@github.com:skite-db/skc.git"
 
 [workspace.dependencies]
+skc-error = { path = "./crates/skc-error" }
 skc-utils = { path = "./crates/skc-utils" }
 
 [package]
 name = "skc"
+categories = ["database", "cli"]
 version = { workspace = true }
 edition = { workspace = true }
 license = { workspace = true }
@@ -28,9 +30,20 @@ name = "skc"
 path = "./src/lib.rs"
 
 [dependencies]
+skc-error = { workspace = true }
+tokio = { version = "*", default-features = false, features = [
+    "macros",
+    "rt-multi-thread",
+], optional =  true }
+clap = { version = "*", features = ["derive"] }
 
 [build-dependencies]
 
 [[bin]]
 name = "skc"
-path = "./src/main.rs"
+path = "./src/bin/main.rs"
+
+[features]
+default = ["runtime-tokio"]
+
+runtime-tokio = ["dep:tokio"]

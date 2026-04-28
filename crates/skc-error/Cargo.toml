@@ -1,0 +1,10 @@
+[package]
+name = "skc-error"
+description = "A system error for the command line tool"
+authors = { workspace = true }
+license = { workspace = true }
+version = { workspace = true }
+edition = { workspace = true }
+repository = { workspace = true }
+
+[dependencies]
