@@ -1,6 +1,7 @@
 [workspace]
 resolver = "3"
-members = ["libs/*", "cmd/*", "skc"]
+members = ["crates/*"]
+exclude = ["target/"]
 
 [workspace.package]
 authors = ["SkiteDB Team's"]
@@ -10,5 +11,26 @@ edition = "2024"
 repository = "git@github.com:skite-db/skc.git"
 
 [workspace.dependencies]
-skc_core = { path = "./libs/skc_core" }
-skc_init = { path = "./cmd/skc_init" }
+skc-utils = { path = "./crates/skc-utils" }
+
+[package]
+name = "skc"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+description = """
+A command line tool for SkiteDB
+"""
+
+[lib]
+name = "skc"
+path = "./src/lib.rs"
+
+[dependencies]
+
+[build-dependencies]
+
+[[bin]]
+name = "skc"
+path = "./src/main.rs"
