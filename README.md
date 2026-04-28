@@ -1,1 +1,1 @@
-# skc
+# 🛠️ SKC - Skite CLI
