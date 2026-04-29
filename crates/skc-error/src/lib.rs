@@ -7,6 +7,9 @@ pub enum SkcError {
         path: std::path::PathBuf,
         context: &'static str,
     },
+    Args {
+      context: &'static str
+    }
 }
 
 impl std::fmt::Display for SkcError {
