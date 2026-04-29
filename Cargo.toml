@@ -1,7 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["crates/*"]
-exclude = ["target/"]
+members = ["skc", "libs/**"]
 
 [workspace.package]
 authors = ["SkiteDB Team's"]
@@ -11,39 +10,11 @@ edition = "2024"
 repository = "git@github.com:skite-db/skc.git"
 
 [workspace.dependencies]
-skc-error = { path = "./crates/skc-error" }
-skc-utils = { path = "./crates/skc-utils" }
+## Commands
+# skc_init = { path = "./libs/cmd/}
 
-[package]
-name = "skc"
-categories = ["database", "cli"]
-version = { workspace = true }
-edition = { workspace = true }
-license = { workspace = true }
-repository = { workspace = true }
-description = """
-A command line tool for SkiteDB
-"""
+[profile.release]
 
-[lib]
-name = "skc"
-path = "./src/lib.rs"
+[profile.dev]
 
-[dependencies]
-skc-error = { workspace = true }
-tokio = { version = "*", default-features = false, features = [
-    "macros",
-    "rt-multi-thread",
-], optional =  true }
-clap = { version = "*", features = ["derive"] }
-
-[build-dependencies]
-
-[[bin]]
-name = "skc"
-path = "./src/bin/main.rs"
-
-[features]
-default = ["runtime-tokio"]
-
-runtime-tokio = ["dep:tokio"]
+[crates.io-patch]
