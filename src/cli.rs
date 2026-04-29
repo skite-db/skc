@@ -13,7 +13,7 @@ pub struct SkCLI {
 
 #[derive(Debug, Subcommand)]
 pub enum Commands {
-    #[command(about = "Initialize SkiteDB")]
+    #[command(about = "Initialize a new database")]
     Init {
         #[arg(default_value = "./")]
         path: PathBuf,
