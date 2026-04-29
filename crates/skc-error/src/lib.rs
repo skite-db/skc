@@ -13,8 +13,8 @@ pub enum SkcError {
       context: &'static str
     },
     Clap {
-    
-}
+     Source: clap::Error,
+    }
 }
 
 impl std::fmt::Display for SkcError {
