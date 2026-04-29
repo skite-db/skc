@@ -8,6 +8,8 @@ pub enum SkcError {
         context: &'static str,
     },
     Args {
+      name: String,
+      value: Option<String>,
       context: &'static str
     }
 }
