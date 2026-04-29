@@ -1,1 +1,4 @@
 # 🛠️ SKC - Skite CLI
+
+
+## Install
