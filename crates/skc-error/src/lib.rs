@@ -11,7 +11,10 @@ pub enum SkcError {
       name: String,
       value: Option<String>,
       context: &'static str
-    }
+    },
+    Clap {
+    
+}
 }
 
 impl std::fmt::Display for SkcError {
