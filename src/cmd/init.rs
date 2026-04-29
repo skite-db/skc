@@ -14,3 +14,6 @@ pub async fn run_command_init(path: PathBuf) -> skc_error::Result<()> {
     
     Ok(())
 }
+
+
+async fn setup_skite_workspace(base_path: &Path) -> skc_error::Result<()> {}
