@@ -1,4 +1,1 @@
-# 🛠️ SKC - Skite CLI
-
-
-## Install
+# 🛠️ `SKC` - The Skite Command Line Tool.

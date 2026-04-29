@@ -8,3 +8,4 @@ edition = { workspace = true }
 repository = { workspace = true }
 
 [dependencies]
+clap = { workspace = true }
