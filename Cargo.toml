@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["skc", "libs/**"]
+members = ["crates/*"]
 
 [workspace.package]
 authors = ["SkiteDB Team's"]
@@ -30,11 +30,6 @@ path = "./src/lib.rs"
 
 [dependencies]
 skc-error = { workspace = true }
-tokio = { version = "*", default-features = false, features = [
-    "macros",
-    "rt-multi-thread",
-], optional =  true }
-clap = { version = "*", features = ["derive"] }
 
 [build-dependencies]
 
@@ -43,6 +38,4 @@ name = "skc"
 path = "./src/bin/main.rs"
 
 [features]
-default = ["runtime-tokio"]
-
-runtime-tokio = ["dep:tokio"]
+default = []

@@ -7,9 +7,9 @@ pub enum SkiteError {
 }
 
 impl std::fmt::Display for SkiteError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            SkiteError::Any { source, message } => write!(f, "{message} : {source}"),
+            Self::Any { source, message } => write!(fmt, "{message} : {source}"),
         }
     }
 }
